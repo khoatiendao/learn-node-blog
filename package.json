@@ -2,9 +2,10 @@
   "name": "lesson1-node-blog",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "nodemon --inspect index.js",
+    "start": "nodemon --experimental-modules --inspect src/index.js",
+    "watch-css": "node-sass --watch src/resources/scss/ --output src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,9 +25,15 @@
   },
   "homepage": "https://github.com/khoatiendao/learn-node-blog#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "engine": "^1.0.0",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "handlebars": "^4.7.7",
+    "morgan": "^1.10.0",
+    "node-sass": "^8.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "path": "^0.12.7"
   }
 }
